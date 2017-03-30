@@ -810,3 +810,8 @@ margin-top: 10px;
     }
 
 }
+
+.lowerList {
+	padding-left:20px !important;
+	padding-right:20px !important;
+}
