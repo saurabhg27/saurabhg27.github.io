@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="personal website">
-    <meta name="author" content="Saurabh Gaggar">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <title>Saurabh's Webpage</title>
-    <!-- Chrome, Firefox OS, Opera and Vivaldi -->
-	<meta name="theme-color" content="#161616">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#161616">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#161616">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="personal website">
+  <meta name="author" content="Saurabh Gaggar">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Saurabh's Webpage</title>
+  <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+  <meta name="theme-color" content="#161616">
+  <!-- Windows Phone --> 
+  <meta name="msapplication-navbutton-color" content="#161616">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#161616">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Add custom CSS here -->
+  <!-- Add custom CSS here -->
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/ekko-lightbox.css" rel="stylesheet">
-    <link href="css/flexslider.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-  </head>
+  <![endif]-->
+  
+  <style type="text/css">
+  /* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+#boxWrapp{
+  display: none;
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(img/loader.gif) center no-repeat #FFF;
+}
+</style>
+<script type="text/javascript">
 
-  <body>
+  window.onload=function(){
+    var loader=document.getElementById("loader");
+    loader.style.display = 'none'; // hide
+    var everythingElse=document.getElementById("boxWrapp");
+    setTimeout(function(){
+
+     everythingElse.style.display='block';
+    }, 100); 
+   
+  }
+  // $(window).load(function() {
+  //   // Animate loader off screen
+  //   $(".se-pre-con").fadeOut("slow");;
+  // });
+</script>
+</head>
+
+<body>
+  <div id="loader" class="se-pre-con"></div>
   <div id="boxWrapp">
     <div class="main-nav clearfix">
-	  <!-- navbar -->
-	<nav class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
+     <!-- navbar -->
+     <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavCol">
@@ -50,150 +82,156 @@
         <div class="collapse navbar-collapse" id="NavCol">
          <ul class="nav navbar-nav navbar-right">
 
-            <li class="current"><a href="#about" class="linear">Home</a></li>
-            <li><a href="#aboutMore" class="linear">About</a></li>
+          <li class="current"><a href="#about" class="linear">Home</a></li>
+          <li><a href="#aboutMore" class="linear">About</a></li>
 
-            <li><a href="#contact" class="linear">Contact</a></li>
-          </ul>
+          <li><a href="#contact" class="linear">Contact</a></li>
+        </ul>
 
 
-        </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-	</div>
-    <!-- Full Page Image Header Area -->
-    <div id="about" class="header">
+</div>
+<!-- Full Page Image Header Area -->
+<div id="about" class="header">
 
 	<div class="maskHeader"></div>
 	<div class="main-caption">
 		<!--<div class="logo">
 			<img src="img/jk.png" alt="logo" />
 		</div>-->
-			<!-- slider -->
-	<div id="flex-head" class="flexslider">
-		<ul class="slides">
-			<li>
-				<h1>Hi, I'm Saurabh</h1>
-				<br>
-				<h2>Welcome to My Webpage</h2>
-			</li>
-		</ul>
-	</div>
-    <!-- end slider -->
-		<!--<a href="#aboutMore" class="btn btnAbout btn-clear border-color color-primary btn-lg linear">READ MORE</a>-->
-	</div><!--  end main caption -->
+   <!-- slider -->
+   <div id="flex-head" >
+    <ul >
+     <li>
+      <h1>Hi, I'm Saurabh</h1>
+      <br>
+      <h2>Welcome to My Webpage</h2>
+    </li>
+  </ul>
+</div>
+<!-- end slider -->
+<!--<a href="#aboutMore" class="btn btnAbout btn-clear border-color color-primary btn-lg linear">READ MORE</a>-->
+</div><!--  end main caption -->
 
-    </div>
-	<!-- end header -->
-    <!-- /Full Page Image Header Area -->
-
-
-    <!-- content -->
-    <div id="aboutMore" class="page">
-      <div class="container">
-		<div class="row">
-          <div class="col-md-10  col-md-offset-1">
-		    <div class="build title-page">
-				<h2 class="text-center">About Me</h2>
-				<div class="line-title bg-primary"></div>
-			</div>
-		   </div><!-- end col -->
-		</div><!-- end row -->
-
-        <div class="row">
-           <div class="col-md-9">
-			   <div class="build main-about">
-				   <div class="row">
-				       <div class="col-md-5">
-				            <div class="main-avatar text-center">
-				                <div class="avatar img-thumbnail img-circle">
-				                <img src="img/avatar.jpg" alt="avatar" />
-				                </div>
-				            </div>
-
-				       </div>
-				       <div class="col-md-7">
-
-						<p>Hello, I'm Saurabh Gaggar, an aspiring engineer studying at NITK.I am passionate about Computers and Technology.</p>
-						<p>This is a static website built with Bootstrap and hosted at GitHub.</p>
-						<p>¯\_(ツ)_/¯</p>
+</div>
+<!-- end header -->
+<!-- /Full Page Image Header Area -->
 
 
-				       </div>
-				   </div>
+<!-- content -->
+<div id="aboutMore" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10  col-md-offset-1">
+        <div class="build title-page">
+          <h2 class="text-center">About Me</h2>
+          <div class="line-title bg-primary"></div>
+        </div>
+      </div><!-- end col -->
+    </div><!-- end row -->
 
+    <div class="row">
+     <div class="col-md-9">
+      <div class="build main-about">
+       <div class="row">
+         <div class="col-md-5">
+          <div class="main-avatar text-center">
+            <div class="avatar img-thumbnail img-circle">
+              <img src="img/avatar.jpg" alt="avatar" />
+            </div>
+          </div>
 
-				</div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-      </div>
-      </div>
+        </div>
+        <div class="col-md-7">
 
-    <!-- /Intro -->
-
-
-    <!--contact-->
-    <div id="contact" class="page page-bgcolor">
-		<div class="container">
-		<div class="row">
-          <div class="col-md-10  col-md-offset-1">
-		    <div class="build title-page">
-				<h2 class="text-center">GET IN TOUCH</h2>
-				<div class="line-title bg-primary"></div>
-			</div>
-		   </div><!-- end col -->
-		</div><!-- end row -->
-	  	<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-5 text-center">
-
-			<ul class="list-inline text-center">
-			  <li class="lowerList"><a href="mailto:saurabhgaggar27@gmail.com" class=" color-primary linear"><i class="fa fa-envelope fa-4x"></i></a></li>
-			  <li class="lowerList"><a href="https://www.facebook.com/saurabh.gaggar" target="_blank" class=" color-primary linear"><i class="fa fa-facebook fa-4x"></i></a></li>
-			  <li class="lowerList"><a href="https://github.com/saurabhg27" target="_blank" class=" color-primary linear"><i class="fa fa-github fa-4x"></i></a></li>
-			  <li class="lowerList"><a href="https://www.linkedin.com/in/saurabhgaggar/" target="_blank" class=" color-primary linear"><i class="fa fa-linkedin fa-4x"></i></a></li>
-			</ul>
-
-			</div>
-			<div class="col-md-3"></div>
-		</div><!-- end row -->
-
-	  </div><!-- end container -->
-	</div>
-    <!--contact-->
-
-    <!-- Footer -->
-    <footer class="bg-black">
-      <div class="container">
-        <div class="row">
-			<div class="text-center">
-				<div class="cp-right">
-					<p>Copyright © 2017 Saurabh Gaggar. All Rights Reserved.</p>
-				</div><!-- end build -->
-			</div><!-- end col -->
+          <p>Hello, I'm Saurabh Gaggar, an aspiring engineer studying at NITK.I am passionate about Computers and Technology.</p>
+          <p>This is a static website built with Bootstrap and hosted at GitHub.</p>
+          <p>¯\_(ツ)_/¯</p>
 
 
         </div>
       </div>
-    </footer>
-    <!-- /Footer -->
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-	<script src="js/jquery.sticky.js" ></script>
-	 <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.scrollTo.js" ></script>
-    <script src="js/jquery.flexslider.js" ></script>
-   <script type="text/javascript" src="js/ekko-lightbox.js"></script>
-   <script src="js/jquery.easing.1.3.js" ></script>
-   <script src="js/jquery.shuffle.js" ></script>
-    <script src="js/script.js"></script>
 
-    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    </div>
+  </div><!-- end col -->
+</div><!-- end row -->
+</div>
+</div>
 
-  </div>
-  </body>
+<!-- /Intro -->
+
+
+<!--contact-->
+<div id="contact" class="page page-bgcolor">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10  col-md-offset-1">
+        <div class="build title-page">
+          <h2 class="text-center">GET IN TOUCH</h2>
+          <div class="line-title bg-primary"></div>
+        </div>
+      </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row">
+     <div class="col-md-3"></div>
+     <div class="col-md-5 text-center">
+
+       <ul class="list-inline text-center">
+         <li class="lowerList"><a href="mailto:saurabhgaggar27@gmail.com" class=" color-primary linear"><i class="fa fa-envelope fa-4x"></i></a></li>
+         <li class="lowerList"><a href="https://www.facebook.com/saurabh.gaggar" target="_blank" class=" color-primary linear"><i class="fa fa-facebook fa-4x"></i></a></li>
+         <li class="lowerList"><a href="https://github.com/saurabhg27" target="_blank" class=" color-primary linear"><i class="fa fa-github fa-4x"></i></a></li>
+         <li class="lowerList"><a href="https://www.linkedin.com/in/saurabhgaggar/" target="_blank" class=" color-primary linear"><i class="fa fa-linkedin fa-4x"></i></a></li>
+       </ul>
+
+     </div>
+     <div class="col-md-3"></div>
+   </div><!-- end row -->
+
+ </div><!-- end container -->
+</div>
+<!--contact-->
+
+<!-- Footer -->
+<footer class="bg-black">
+  <div class="container">
+    <div class="row">
+     <div class="text-center">
+      <div class="cp-right">
+       <p>Copyright © 2017 Saurabh Gaggar. All Rights Reserved.</p>
+     </div><!-- end build -->
+   </div><!-- end col -->
+
+
+ </div>
+</div>
+</footer>
+<!-- /Footer -->
+
+<!-- JavaScript -->
+<script src="js/jquery_1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js" ></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.scrollTo.js" ></script> 
+<script src="js/jquery.flexslider.js" ></script>
+<script type="text/javascript" src="js/ekko-lightbox.js"></script>
+<script src="js/jquery.easing.1.3.js" ></script>
+<script src="js/jquery.shuffle.js" ></script>
+<script src="js/script.js"></script>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/ekko-lightbox.css" rel="stylesheet">
+  <link href="css/flexslider.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+
+</div>
+</body>
 
 </html>
